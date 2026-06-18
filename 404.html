@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Join Wayfull List</title>
+  <meta name="apple-itunes-app" content="app-id=6777348093">
+  <script>
+    const path = window.location.pathname;
+    const code = path.split('/join/')[1];
+    if (code) {
+      // Try to open the app
+      window.location = `wayfull://join/${code}`;
+      // Fallback to App Store after 2 seconds
+      setTimeout(() => {
+        window.location = 'https://apps.apple.com/app/id6777348093';
+      }, 2000);
+    }
+  </script>
+</head>
+<body>
+  <div style="font-family: -apple-system; text-align: center; padding: 60px 20px;">
+    <h2 style="color: #48a947;">Opening Wayfull...</h2>
+    <p>If the app doesn't open, <a href="https://apps.apple.com/app/id6777348093">download Wayfull</a> from the App Store.</p>
+  </div>
+</body>
+</html>
